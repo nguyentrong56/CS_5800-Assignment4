@@ -1,4 +1,7 @@
 package main;
+
+import java.util.Random;
+
 public class AccountHolder {
 	protected int ID ;
 	protected String address;
@@ -6,7 +9,7 @@ public class AccountHolder {
 	this.ID = ID;
 	this.address=address;
 	}
-	public int nextID(){
-	return ID++;
+	public static int nextID(){
+	return new Random().nextInt(1000000);
 	} 
 }
